@@ -1,0 +1,1 @@
+This simple test will verify that user is able to login into the webpage
