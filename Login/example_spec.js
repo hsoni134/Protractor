@@ -1,3 +1,6 @@
+/*
+	@Author: Harsh Soni
+*/
 describe('Testing Login Application', function() {
   it('Should able to login by username, password ' , function() {
     browser.get('http://www.way2automation.com/angularjs-protractor/registeration/#/login');
