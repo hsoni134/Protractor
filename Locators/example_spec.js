@@ -1,4 +1,6 @@
-/* This demo includes below Locators
+/* 
+	@Author: Harsh Soni
+		This demo includes below Locators
 		1:	binding
  		2:	model
  		3:	buttonText
@@ -6,17 +8,16 @@
  		5:	repeater
  		6:	options
  		7:	deepCss
-	Below locators from webdriverJS
 		8:	className
-		9:	css
-		10:	id
+		9:	css-
+		10:	id-
 		11:	linkText
  		12:	js
  		13:	name
  		14:	partialLinkText
-		15:	tagName
-		16:	xpath
-		17: $
+		15:	tagName-
+		16:	xpath-
+		17: $- 
 		18: $$
 */
 describe('Using different locators on the web page',function(){
@@ -70,4 +71,22 @@ describe('Using different locators on the web page',function(){
 		});
 		expect(element(by.css('body:nth-child(2) div.container.ng-scope:nth-child(3) > h4:nth-child(2)')).getText()).toBe('History');
 	});
+	/*
+	-------------------------$ expression to locate element by id------------------------------------
+	*/
+	it('Element should be identified using the $ expression by passing id in it',function(){
+		expect($('#gobutton').getText()).toBe('Go!');
+	});
+	/*
+	-------------------------$ expression to locate element by class------------------------------------
+	*/
+	it('Element should be identified using the $ expression by passing class name in it',function(){
+		expect($('.btn').getText()).toBe('Go!');
+	});
+	/*
+	-------------------------$ expression to locate element by tag-name------------------------------------
+	*/
+	it('Element should be identified using the $ expression by passing tag-name in it',function(){
+		expect($('button').getText()).toBe('Go!');
+	});	
 });
